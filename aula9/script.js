@@ -1,40 +1,51 @@
-let person={
-    name: 'Ana',
-    age: 20,
-    cc: 123  
+//laço de repetição for
+/*for(let i=0; i<10; i++){
+    console.log(i);
 }
 
-let operation={
-    sacar: function(saldo, valor){
-        return saldo-=valor;
-    },
-    depositar: function(saldo, valor){
-        return saldo+=valor;
+var numbers="";
+for(let i=0; i<10; i++){
+   numbers += i;
+
+   if(i!=9){
+        numbers+='-';
+   }
+}
+console.log(numbers);*/
+
+//laço de repetição while
+/*var numbers="";
+var i=0;
+while(i < 10){
+    numbers+=i;
+
+    if(i!=9){
+        numbers+='-';
     }
+
+    i++;
+}
+console.log(numbers);*/
+
+//laço de repetição do while
+/*var numbers="";
+var i=0;
+do {
+    numbers += i;
+    if(i!=9){
+        numbers+='-';
+    }
+    i++;
+}while(i < 10);
+
+console.log(numbers);*/
+
+let person={
+    name:'Ana',
+    age: 18,
+    city: 'New York'
 }
 
-let bank={
-    person: person,
-    operation: operation,
-    saldo: 50
+for(key in person){
+    console.log(person.age);
 }
-
-let value=20;
-console.log(bank.person.name + 
-    " portador da conta " + 
-    bank.person.cc + 
-    " realizou um saque no valor de R$ " +
-    value +
-    " ficando com R$ " +
-    bank.operation.sacar(bank.saldo,value)
-);
-
-    let value1=40;
-    console.log(bank.person.name + 
-        " portador da conta " + 
-        bank.person.cc + 
-        " realizou um depósito no valor de R$ " +
-        value1 +
-        " ficando com R$ " +
-        bank.operation.depositar(bank.saldo,value1)
-);
